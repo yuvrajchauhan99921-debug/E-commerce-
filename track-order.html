@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | Mega Softel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Notification Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone-alt"></i> +91-9876543210</span>
+                <span><i class="fas fa-envelope"></i> support@megasoftel.com</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="index.html">Back to Store</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container" style="justify-content: space-between;">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Mega Softel Logo" style="height: 50px; border-radius: 4px;">
+                <h1>MEGA SOFTEL</h1>
+            </a>
+            
+            <nav style="display: flex; gap: 20px;">
+                <a href="index.html" class="btn btn-outline" style="padding: 8px 16px;">Go to Shop</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Track Your Order</h1>
+            <p>Enter your tracking details below to see the real-time status of your networking gear.</p>
+        </div>
+    </div>
+
+    <!-- Tracking Content -->
+    <main class="container" style="padding: 80px 5%; max-width: 800px;">
+        
+        <div style="background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 40px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+            <i class="fas fa-box-open" style="font-size: 3.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+            <h2 style="margin-bottom: 15px;">Order Tracking Portal</h2>
+            <p style="color: var(--text-light); margin-bottom: 30px;">You can find your Tracking ID or Order ID in your shipping confirmation email.</p>
+            
+            <form onsubmit="event.preventDefault(); document.getElementById('tracking-result').classList.remove('hidden');" style="max-width: 500px; margin: 0 auto;">
+                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <input type="text" required placeholder="Enter Order ID or AWB Number" style="flex: 1; padding: 15px; border: 1px solid var(--border); border-radius: 6px; font-size: 1.05rem; outline: none;">
+                    <button type="submit" class="btn btn-primary" style="padding: 0 30px;">Track</button>
+                </div>
+            </form>
+
+            <div id="tracking-result" class="hidden" style="margin-top: 40px; text-align: left; padding-top: 30px; border-top: 1px solid var(--border);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <h3 style="color: var(--success);">Order Shipped</h3>
+                    <span style="font-weight: 600; color: var(--text-light);">Expected Delivery: Tomorrow</span>
+                </div>
+                
+                <div style="position: relative; padding-left: 30px; margin-bottom: 30px;">
+                    <!-- Timeline Lines -->
+                    <div style="position: absolute; left: 6px; top: 10px; bottom: 0; width: 2px; background: var(--success);"></div>
+                    
+                    <!-- Steps -->
+                    <div style="position: relative; margin-bottom: 20px;">
+                        <div style="position: absolute; left: -30px; top: 4px; width: 14px; height: 14px; background: var(--success); border-radius: 50%;"></div>
+                        <h4 style="margin-bottom: 5px;">Order Placed</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">We have received your order.</p>
+                    </div>
+                    
+                    <div style="position: relative; margin-bottom: 20px;">
+                        <div style="position: absolute; left: -30px; top: 4px; width: 14px; height: 14px; background: var(--success); border-radius: 50%;"></div>
+                        <h4 style="margin-bottom: 5px;">Packed & Quality Checked</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Your networking equipment has been verified.</p>
+                    </div>
+
+                    <div style="position: relative; margin-bottom: 20px;">
+                        <div style="position: absolute; left: -30px; top: 4px; width: 14px; height: 14px; background: var(--success); border-radius: 50%;"></div>
+                        <h4 style="margin-bottom: 5px;">Dispatched from Hub</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Package left our New Delhi facility.</p>
+                    </div>
+
+                    <div style="position: relative;">
+                        <div style="position: absolute; left: -30px; top: 4px; width: 14px; height: 14px; background: var(--border); border: 2px solid var(--success); border-radius: 50%;"></div>
+                        <h4 style="margin-bottom: 5px;">Out for Delivery</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Pending...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <div class="container" style="text-align: center; color: #94a3b8; font-size: 0.9rem;">
+                <p>&copy; 2024 Mega Softel Pvt. Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

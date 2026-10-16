@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Center | MEGA SOFTAL</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Notification Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone-alt"></i> +91-9876543210</span>
+                <span><i class="fas fa-envelope"></i> support@megasoftal.com</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="index.html">Back to Store</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container" style="justify-content: space-between;">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fas fa-layer-group"></i></div>
+                <h1>MEGA SOFTAL</h1>
+            </a>
+            
+            <nav style="display: flex; gap: 20px;">
+                <a href="index.html" class="btn btn-outline" style="padding: 8px 16px;">Go to Shop</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Customer Support Center</h1>
+            <p>We're here to help you with your orders, products, and general inquiries.</p>
+        </div>
+    </div>
+
+    <!-- Support Content -->
+    <main class="support-container container">
+        <!-- FAQs -->
+        <section class="faq-section" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h4>What are your delivery times?</h4>
+                <p>All orders shipped from our Bahadurgarh hub typically arrive within 3-5 business days depending on your location in India.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>Do you offer installation for CCTV & Industrial equipment?</h4>
+                <p>Yes, we offer professional installation services by our certified engineers in select cities. Please select 'Installation Required' during checkout.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4>What is the return policy?</h4>
+                <p>We offer a hassle-free 30-day return policy for unopened items in their original packaging. Electronics must not have been tampered with.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How can I track my order?</h4>
+                <p>Once your order has shipped, you will receive an email with your AWB tracking number. You can enter this on our courier partner's website.</p>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-section">
+            <h2>Send us a Message</h2>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully! Our team will contact you shortly.');">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="john@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="order-id">Order ID (Optional)</label>
+                    <input type="text" id="order-id" placeholder="e.g. MS-92837">
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" rows="5" required placeholder="How can we help you today?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <div class="logo-icon"><i class="fas fa-layer-group"></i></div>
+                    <h2>MEGA SOFTAL</h2>
+                </a>
+                <p>Pioneering modern e-commerce solutions with a robust selection of industrial, electronic, and lifestyle products straight out of Bahadurgarh.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Store Home</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Modern Industrial Estate, Bahadurgarh, Haryana 124507</li>
+                    <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +91-9876543210</li>
+                    <li><i class="fas fa-envelope" style="margin-right: 8px;"></i> support@megasoftal.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 MEGA SOFTAL. Developed by an elite engineering team.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

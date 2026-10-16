@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Softel | Networking Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Notification Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fas fa-phone-alt"></i> +91-9876543210</span>
+                <span><i class="fas fa-envelope"></i> sales@megasoftel.com</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="support.html">Support & FAQ</a>
+                <a href="track-order.html">Track Order</a>
+                <a href="login.html">Login / Register</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.jpg" alt="Mega Softel Logo" style="height: 50px; border-radius: 4px;">
+                <h1>MEGA SOFTEL</h1>
+            </a>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for routers, switches, cables...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <div class="action-btn user-btn">
+                    <i class="far fa-user"></i>
+                </div>
+                <div class="action-btn cart-btn" id="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+        <nav class="category-nav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#" class="active" data-category="all">All Products</a></li>
+                    <li><a href="#" data-category="Routers">Routers & WiFi</a></li>
+                    <li><a href="#" data-category="Switches">Switches & Hubs</a></li>
+                    <li><a href="#" data-category="Adapters">Adapters & Extenders</a></li>
+                    <li><a href="#" data-category="Cables">Networking Cables</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="container hero-content">
+            <span class="hero-subtitle">Premium Networking Gear</span>
+            <h2>Next-Generation<br>Smart Networking Solutions</h2>
+            <p>Authorized provider of Tenda Routers, Ethernet Switches, Wireless Adapters, and Enterprise Networking Devices in New Delhi.</p>
+            <button class="btn btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">
+                Shop Collection <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Shop Area -->
+    <main class="shop-container container" id="shop">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <ul class="filter-list" id="category-filter">
+                    <li>
+                        <label><input type="checkbox" value="Routers" class="filter-checkbox category-checkbox"> Routers & WiFi Systems</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" value="Switches" class="filter-checkbox category-checkbox"> Switches & Hubs</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" value="Adapters" class="filter-checkbox category-checkbox"> Adapters & Extenders</label>
+                    </li>
+                    <li>
+                        <label><input type="checkbox" value="Cables" class="filter-checkbox category-checkbox"> Networking Cables</label>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div class="price-slider">
+                    <input type="range" min="0" max="15000" value="15000" id="price-range">
+                    <div class="price-labels">
+                        <span>₹0</span>
+                        <span id="price-value">₹15,000+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Rating</h3>
+                <ul class="filter-list" id="rating-filter">
+                    <li><label><input type="radio" name="rating" value="4" class="filter-radio"> 4★ & above</label></li>
+                    <li><label><input type="radio" name="rating" value="3" class="filter-radio"> 3★ & above</label></li>
+                    <li><label><input type="radio" name="rating" value="0" class="filter-radio" checked> Any Rating</label></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Product Display Area -->
+        <section class="products-display">
+            <div class="products-header">
+                <p>Showing <strong id="product-count">0</strong> products</p>
+                <div class="sort-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Average Rating</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <!-- Products dynamically inserted via JS -->
+            </div>
+            
+            <div id="no-products" class="no-products hidden">
+                <i class="fas fa-search"></i>
+                <h3>No products found</h3>
+                <p>Try adjusting your filters to find what you're looking for.</p>
+                <button class="btn btn-outline" id="clear-filters">Clear All Filters</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container features-grid">
+            <div class="feature-box">
+                <i class="fas fa-truck-fast"></i>
+                <h4>Fast Delivery</h4>
+                <p>Quick shipping directly from our New Delhi warehouse.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Genuine Products</h4>
+                <p>100% authentic Tenda and major networking brands.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-undo"></i>
+                <h4>Easy Returns</h4>
+                <p>30 days return policy for all sealed networking gear.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-headset"></i>
+                <h4>Technical Support</h4>
+                <p>Dedicated developer-level networking tech support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <img src="images/logo.jpg" alt="Mega Softel Logo" style="height: 40px; border-radius: 4px;">
+                    <h2>MEGA SOFTEL</h2>
+                </a>
+                <p>Pioneering modern networking solutions with a robust selection of routers, switches, and lifestyle technology products straight out of New Delhi.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Center</h4>
+                <ul>
+                    <li><a href="support.html">Support Center</a></li>
+                    <li><a href="support.html#faq">FAQs</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Mega Softel Pvt. Ltd. Developed by an elite engineering team.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="Payments" class="payment-icons" style="height: 20px;">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button class="close-btn" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <span>Subtotal</span>
+                <span class="total-price">₹<span id="cart-total">0</span></span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

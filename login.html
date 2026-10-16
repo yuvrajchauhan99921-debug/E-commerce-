@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Mega Softel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #e2e8f0 100%);
+            padding: 20px;
+        }
+        .auth-card {
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+        }
+        .auth-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            text-decoration: none;
+        }
+        .auth-logo h2 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+        .auth-form {
+            text-align: left;
+        }
+        .auth-input-group {
+            margin-bottom: 20px;
+        }
+        .auth-input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+        .auth-input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .auth-input-group input:focus {
+            border-color: var(--primary);
+        }
+        .auth-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+        }
+        .auth-options a {
+            color: var(--primary);
+        }
+        .auth-options a:hover {
+            text-decoration: underline;
+        }
+        .auth-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        .auth-footer {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+        .auth-footer a {
+            color: var(--primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <a href="index.html" class="auth-logo">
+                <img src="images/logo.jpg" alt="Mega Softel Logo" style="height: 40px; border-radius: 4px;">
+                <h2>MEGA SOFTEL</h2>
+            </a>
+            
+            <h3 style="margin-bottom: 5px; color: var(--secondary);">Welcome Back</h3>
+            <p style="color: var(--text-light); margin-bottom: 30px;">Sign in to access your orders and account.</p>
+
+            <form class="auth-form" action="index.html">
+                <div class="auth-input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required placeholder="Enter your email">
+                </div>
+                <div class="auth-input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                </div>
+                
+                <div class="auth-options">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-btn">Sign In</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="#">Create one now</a>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 0.85rem;">
+                <a href="index.html" style="color: var(--text-light);"><i class="fas fa-arrow-left"></i> Return to Store</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
